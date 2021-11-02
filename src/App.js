@@ -1,10 +1,12 @@
 import './App.css'
+import LineChart from './views/LineChart'
 import SmileFace from './views/SmileFace'
 
 function App() {
   return (
     <div className='App'>
-      <SmileFace />
+      {/* <SmileFace /> */}
+      <LineChart />
     </div>
   )
 }
