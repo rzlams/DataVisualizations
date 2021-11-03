@@ -1,0 +1,25 @@
+/* https://github.com/amycesal/dataviz-style-guide/blob/master/Sunlight-StyleGuide-DataViz.pdf */
+.tick line {
+  stroke: #c0c0bb;
+}
+
+.tick text {
+  fill: #635f5d;
+}
+
+.mark circle {
+  fill: #137b80;
+}
+
+.mark path {
+  fill: none;
+  stroke: #137b80;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.axis-label {
+  text-anchor: middle;
+  font-size: 2.5em;
+  fill: #635f5d;
+}
