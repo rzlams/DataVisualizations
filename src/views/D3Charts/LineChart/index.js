@@ -3,7 +3,7 @@ import { csv, scaleLinear, scaleTime, extent, timeFormat } from 'd3'
 import { AxisBottom } from './AxisBottom'
 import { AxisLeft } from './AxisLeft'
 import { Marks } from './Marks'
-import './styles.css'
+import styles from './styles.module.css'
 
 const xValuesCallback = (d) => d.timestamp
 const xAxisLabel = 'Time'
@@ -55,11 +55,14 @@ const LineChart = () => {
     <svg width={width} height={height} style={{ border: '1px solid black' }}>
       <g transform={`translate(${margin.left}, ${margin.top})`}>
         <AxisBottom innerHeight={innerHeight} xScale={xScale} formatTickValue={xAxisTickFormat} />
-        <text className='axis-label' transform={`translate(${-yAxisLabelOffset}, ${innerHeight / 2}) rotate(-90)`}>
+        <text
+          className={styles.axisLabel}
+          transform={`translate(${-yAxisLabelOffset}, ${innerHeight / 2}) rotate(-90)`}
+        >
           {yAxisLabel}
         </text>
         <AxisLeft yScale={yScale} innerWidth={innerWidth} />
-        <text className='axis-label' x={innerWidth / 2} y={innerHeight + xAxisLabelOffset}>
+        <text className={styles.axisLabel} x={innerWidth / 2} y={innerHeight + xAxisLabelOffset}>
           {xAxisLabel}
         </text>
         <Marks
@@ -68,7 +71,7 @@ const LineChart = () => {
           xScale={xScale}
           yValuesCallback={yValuesCallback}
           xValuesCallback={xValuesCallback}
-          tooltipFromat={xAxisTickFormat}
+          tooltipFormat={xAxisTickFormat}
           circleRadius={circleRadius}
           strokeWidth={strokeWidth}
         />

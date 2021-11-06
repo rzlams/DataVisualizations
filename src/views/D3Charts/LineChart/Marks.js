@@ -1,5 +1,6 @@
 import React from 'react'
 import { line, curveNatural } from 'd3'
+import styles from './styles.module.css'
 
 export const Marks = ({
   data,
@@ -7,12 +8,12 @@ export const Marks = ({
   xScale,
   yValuesCallback,
   xValuesCallback,
-  tooltipFromat,
+  tooltipFormat,
   circleRadius = 5,
   strokeWidth = 3,
 }) =>
   data.map((d, i) => (
-    <g className='mark'>
+    <g key={i} className={styles.mark}>
       <path
         strokeWidth={strokeWidth}
         d={line()
@@ -21,7 +22,7 @@ export const Marks = ({
           .curve(curveNatural)(data)}
       />
       {/* <circle key={i} cx={xScale(xValuesCallback(d))} cy={yScale(yValuesCallback(d))} r={circleRadius}>
-        <title>{tooltipFromat(xValuesCallback(d))}</title>
+        <title>{tooltipFormat(xValuesCallback(d))}</title>
       </circle> */}
     </g>
   ))
