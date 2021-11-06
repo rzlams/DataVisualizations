@@ -1,0 +1,26 @@
+/* https://github.com/amycesal/dataviz-style-guide/blob/master/Sunlight-StyleGuide-DataViz.pdf */
+
+.marks {
+  .sphere {
+    fill: #fbfbfb;
+  }
+
+  .land {
+    fill: #ececec;
+  }
+
+  .interiors {
+    fill: none;
+    stroke: #d9dfe0;
+  }
+
+  .graticule {
+    fill: none;
+    stroke: #ececec;
+  }
+
+  .migrants {
+    fill: #137b80;
+    opacity: 0.3;
+  }
+}

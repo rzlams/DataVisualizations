@@ -1,0 +1,26 @@
+/* https://github.com/amycesal/dataviz-style-guide/blob/master/Sunlight-StyleGuide-DataViz.pdf */
+.dropdown {
+  margin: 0 2em;
+}
+
+.axisLabel {
+  text-anchor: middle;
+  font-size: 0.4em;
+}
+
+.tick {
+  fill: #635f5d;
+  cursor: default;
+
+  text {
+    font-size: 0.5em;
+  }
+
+  line {
+    stroke: #ececec;
+  }
+}
+
+.mark {
+  fill: #137b80;
+}
