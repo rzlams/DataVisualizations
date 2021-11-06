@@ -3,7 +3,7 @@ import { csv, scaleBand, scaleLinear, max, format } from 'd3'
 import { AxisBottom } from './AxisBottom'
 import { AxisLeft } from './AxisLeft'
 import { Marks } from './Marks'
-import './styles.css'
+import styles from './styles.module.css'
 
 const yValuesCallback = (d) => d.Country
 const xAxisLabel = 'Sepal Length'
@@ -45,7 +45,7 @@ const BarChart = () => {
       <g transform={`translate(${margin.left}, ${margin.top})`}>
         <AxisBottom innerHeight={innerHeight} xScale={xScale} formatTickValue={xAxisTickFormat} />
         <AxisLeft yScale={yScale} />
-        <text className='axis-label' x={innerWidth / 2} y={innerHeight + xAxisLabelOffset}>
+        <text className={styles.axisLabel} x={innerWidth / 2} y={innerHeight + xAxisLabelOffset}>
           {xAxisLabel}
         </text>
         <Marks

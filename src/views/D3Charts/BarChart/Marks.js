@@ -1,9 +1,10 @@
 import React from 'react'
+import styles from './styles.module.css'
 
 export const Marks = ({ data, yScale, xScale, yValuesCallback, xValuesCallback, tooltipFromat }) =>
   data.map((d, i) => (
     <rect
-      className='mark'
+      className={styles.mark}
       key={i}
       x={0}
       y={yScale(yValuesCallback(d))}
